@@ -12,10 +12,30 @@
   <span>test</span>
   <a href="https://weixin.qq.com/g/A1zh44WvC_rSbDjy
 ">点击加入</a>
+  <script src="./clipboard.min.js"></script>
+  <!-- Target -->
+  <!-- Target -->
+  <textarea id="bar">Mussum ipsum cacilds...</textarea>
+
+  <!-- Trigger -->
+  <button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
+    Cut to clipboard
+  </button>
+  <script>
+    const clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', (e) => {
+      console.log(e.text);
+    })
+  </script>
   <!-- <script>
-    const url = 'weixin://weixin.qq.com/g/A1zh44WvC_rSbDjy';
-    alert('test');
-    window.open(url);
+    var clipboard = new Clipboard('.btn');
+    clipboard.on('success', function (e) {
+      console.log(e);
+      document.getElementById('copyCode').innerHTML = '复制成功';
+    });
+    clipboard.on('error', function (e) {
+      document.getElementById('copyCode').innerHTML = '复制失败，请长按复制';
+    });
   </script> -->
 </body>
 
