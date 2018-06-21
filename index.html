@@ -47,6 +47,15 @@
       })
     }, false);
 
+    document.addEventListener('touchend', function (e) {
+      console.log('test2');
+      const clipboard = new ClipboardJS('.container', {
+        text: function () {
+          return 'fxrqHg74qm';
+        }
+      })
+    })
+
 
 
     // clipboard.on('success', (e) => {
