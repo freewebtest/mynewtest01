@@ -34,25 +34,20 @@
   <div class="container">
     <img src="./WechatIMG77.jpeg" alt="">
   </div>
-  <!-- <a href="https://weixin.qq.com/g/A1zh44WvC_rSbDjy
-">点击加入</a> -->
   <script src="./clipboard.min.js"></script>
-  <!-- <textarea id="bar">Mussum ipsum cacilds...</textarea>
-
-  <button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
-    Cut to clipboard
-  </button> -->
   <script>
 
-    // const clipboard = new ClipboardJS('.btn');
-    // clipboard.on('success', (e) => {
-    //   console.log(e.text);
-    // })
-    const clipboard = new ClipboardJS('.container', {
-      text: function () {
-        return 'fxrqHg74qm';
-      }
-    })
+    // window.clipboardData.setData('text/plain', 'fxrqHg74qm');
+    document.addEventListener('touchstart', function (e) {
+      console.log('test');
+      const clipboard = new ClipboardJS('.container', {
+        text: function () {
+          return 'fxrqHg74qm';
+        }
+      })
+    }, false);
+
+
 
     // clipboard.on('success', (e) => {
     //   alert(e);
