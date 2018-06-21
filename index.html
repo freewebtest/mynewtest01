@@ -6,21 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 200px;
+      height: 300px;
+      border: 1px solid red;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 
 <body>
-  <span>test</span>
-  <a href="https://weixin.qq.com/g/A1zh44WvC_rSbDjy
-">点击加入</a>
+  <div class="container">
+    <img src="./WechatIMG77.jpeg" alt="">
+  </div>
+  <!-- <a href="https://weixin.qq.com/g/A1zh44WvC_rSbDjy
+">点击加入</a> -->
   <script src="./clipboard.min.js"></script>
-  <!-- Target -->
-  <!-- Target -->
-  <textarea id="bar">Mussum ipsum cacilds...</textarea>
+  <!-- <textarea id="bar">Mussum ipsum cacilds...</textarea>
 
-  <!-- Trigger -->
   <button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
     Cut to clipboard
-  </button>
+  </button> -->
   <script>
     const clipboard = new ClipboardJS('.btn');
     clipboard.on('success', (e) => {
