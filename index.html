@@ -43,10 +43,21 @@
     Cut to clipboard
   </button> -->
   <script>
-    const clipboard = new ClipboardJS('.btn');
-    clipboard.on('success', (e) => {
-      console.log(e.text);
+
+    // const clipboard = new ClipboardJS('.btn');
+    // clipboard.on('success', (e) => {
+    //   console.log(e.text);
+    // })
+    const clipboard = new ClipboardJS('.container', {
+      text: function () {
+        return 'abcd';
+      }
     })
+
+    clipboard.on('success', () => {
+      console.log('test');
+    })
+
   </script>
   <!-- <script>
     var clipboard = new Clipboard('.btn');
