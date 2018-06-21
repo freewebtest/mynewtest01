@@ -19,8 +19,19 @@
 
     .container {
       width: 100%;
+      position: relative;
       /* height: 300px; */
-      /* border: 1px solid red; */
+      border: 1px solid red;
+    }
+
+    button {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* background-color: red; */
     }
 
     img {
@@ -33,28 +44,46 @@
 <body>
   <div class="container">
     <img src="./WechatIMG77.jpeg" alt="">
+    <button class="btn">1</button>
   </div>
   <script src="./clipboard.min.js"></script>
   <script>
-
-    // window.clipboardData.setData('text/plain', 'fxrqHg74qm');
-    document.addEventListener('touchstart', function (e) {
+    const btn = document.querySelector('.btn');
+    btn.addEventListener('click', function () {
+      // alert('test');
       console.log('test');
-      const clipboard = new ClipboardJS('.container', {
-        text: function () {
-          return 'fxrqHg74qm';
-        }
-      })
-    }, false);
-
-    document.addEventListener('touchend', function (e) {
-      console.log('test2');
-      const clipboard = new ClipboardJS('.container', {
-        text: function () {
-          return 'fxrqHg74qm';
-        }
-      })
     })
+    // window.clipboardData.setData('text/plain', 'fxrqHg74qm');
+    // window.onload = function () {
+
+    //   var bot = document.getElementById('bot');
+    //   bot.addEventListener('touchstart', function () { alert('touchstart'); });
+    //   creatTouchstartEventAndDispatch(bot);
+
+    //   function creatTouchstartEventAndDispatch(el) {
+    //     var event = document.createEvent('Events');
+    //     event.initEvent('touchstart', true, true);
+    //     el.dispatchEvent(event);
+    //   }
+
+    // }
+    // document.addEventListener('touchstart', function (e) {
+    //   console.log('test');
+    //   const clipboard = new ClipboardJS('.container', {
+    //     text: function () {
+    //       return 'fxrqHg74qm';
+    //     }
+    //   })
+    // }, false);
+
+    // document.addEventListener('touchend', function (e) {
+    //   console.log('test2');
+    //   const clipboard = new ClipboardJS('.container', {
+    //     text: function () {
+    //       return 'fxrqHg74qm';
+    //     }
+    //   })
+    // })
 
 
 
