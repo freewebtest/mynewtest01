@@ -54,8 +54,8 @@
       }
     })
 
-    clipboard.on('success', () => {
-      alert('test');
+    clipboard.on('success', (e) => {
+      alert(e);
       console.log('test');
     })
 
