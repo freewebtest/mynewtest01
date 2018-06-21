@@ -50,11 +50,12 @@
     // })
     const clipboard = new ClipboardJS('.container', {
       text: function () {
-        return 'abcd';
+        return 'cdef';
       }
     })
 
     clipboard.on('success', () => {
+      alert('test');
       console.log('test');
     })
 
